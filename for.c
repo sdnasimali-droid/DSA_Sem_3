@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(){
     int i;
-    for(;;){
+    for(i=0;i<5;i++){
         printf("hello\n");
     }
 }
