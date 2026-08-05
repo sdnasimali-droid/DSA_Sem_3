@@ -19,6 +19,6 @@ int main(){
     printf("Which Number Factorial you want to Calculate:");
     scanf("%d",&a);
     printf("Factorial=%d",Rec(a));
-    // printf("Factorial=%d",Iter(a));
+    printf("Factorial=%d",Iter(a));
 
 }
