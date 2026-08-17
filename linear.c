@@ -4,9 +4,12 @@ void linear(int a[], int n, int ele){
     for(i=0;i<n;i++){
         if(a[i]==ele)
         {
+            printf("Element found at position: %d\n",i+1);
             x=1;
+            break; 
+
         }
-        break;        
+               
     }
     if(x==0)
         printf("Element not found\n");
