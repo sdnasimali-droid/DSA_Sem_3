@@ -14,7 +14,6 @@ int main(){
     printf("Address of p2=%p\n",&p2);
     printf("Value of p1=%p\n",p1);
     printf("Value of p2=%p\n",p2);
-
     return 0;
 
 }
