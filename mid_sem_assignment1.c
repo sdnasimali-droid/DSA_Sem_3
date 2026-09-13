@@ -22,7 +22,7 @@ void quickSort(int arr[],int low,int high){
         quickSort(arr,pi + 1,high);
     }
 }void bubbleSort( int array[], int size){
-    for (int step=0;step<1;step++){
+    for (int step=0;step<size;step++){
         for (int i=0;i<size-step-1;i++){
             if (array[i] > array[i+1]){
                 int temp= array[i];
@@ -36,6 +36,7 @@ void quickSort(int arr[],int low,int high){
         }
         
         quickSort(array,0,size-1);
+        break;
     }
 }
 int main(){
