@@ -45,7 +45,7 @@ void peek() {
 }
 int main() {
     int choice, value;
-    while (1) {
+    do {
         printf("1. Push\n2. Pop\n3. Peek\n4. Display\n5. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -72,5 +72,6 @@ int main() {
             default:
                 printf("Invalid choice\n");
         }
-    }
+    }while (choice != 5);
+    return 0;
 }
