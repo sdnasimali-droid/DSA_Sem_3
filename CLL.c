@@ -71,7 +71,11 @@ void deleteAtEnd(){
     current->next=head;
 }
 void insertInMiddle(int value, int position){
-    if(head==NULL || position<1){
+    if(position<1){
+        printf("Invalid position\n");
+        return;
+    }
+    if(head==NULL ){
         printf("List is empty\n");
         return;
     }
@@ -93,7 +97,11 @@ void insertInMiddle(int value, int position){
     current->next=newNode;
 }
 void deleteFromMiddle(int pos){
-    if(head==NULL || pos<1){
+    if(pos<1){
+        printf("Invalid position\n");
+        return;
+    }
+    if(head==NULL ){
         printf("List is empty\n");
         return;
     }
@@ -141,17 +149,6 @@ void display(){
         printf("%d\n", current->data);
         current = current->next;
     } while (current != head);
-}
-void traverse(){
-    if(head==NULL){
-        printf("Linked list is empty.\n");
-        return;
-    }
-    struct node *current=head;
-    do{
-        printf("%d\n",current->data);
-        current=current->next;
-    }while(current!=head);
 }
 void insert(int value){
     if(head==NULL){
@@ -223,6 +220,7 @@ int main(){
                 printf("Enter value to insert: ");
                 scanf("%d",&value);
                 insert(value);
+                break;
 
             case 10:
                 printf("Exiting program...\n");
