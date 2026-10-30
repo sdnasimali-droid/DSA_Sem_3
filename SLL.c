@@ -52,6 +52,14 @@ void deleteAtEnd(){
     current->next=NULL;
 }
 void insertInMiddle(int value, int position){
+    if(position<1){
+        printf("Invalid position\n");
+        return;
+    }
+    if(head==NULL ){
+        printf("List is empty\n");
+        return;
+    }
     if(position==1){
         insertAtBeginning(value);
         return;
@@ -70,7 +78,11 @@ void insertInMiddle(int value, int position){
     current->next=newNode;
 }
 void deleteFromMiddle(int pos){
-    if(head==NULL || pos<1){
+    if(pos<1){
+        printf("Invalid position\n");
+        return;
+    }
+    if(head==NULL ){
         printf("List is empty\n");
         return;
     }
