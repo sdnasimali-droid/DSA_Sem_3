@@ -165,20 +165,6 @@ void insert(int value){
     insertAtEnd(value);
 }
 int main(){
-    struct node *first=(struct node*)malloc(sizeof(struct node));
-    struct node *second=(struct node*)malloc(sizeof(struct node));
-    struct node *third=(struct node*)malloc(sizeof(struct node));
-    if(first==NULL || second==NULL || third==NULL){
-        printf("Memory allocation failed\n");
-        return 1;
-    }
-    first->data=10;
-    second->data=20;
-    third->data=30;
-    first->next=second;
-    second->next=third;
-    third->next=NULL;
-    head=first;
     int choice,value,position;
     do{
         printf("Enter your choice\n(1.Insert at beginning,\n2.Insert at end,\n3.Delete at beginning,\n4.Delete at end,\n5.Insert in middle,\n6.Delete from middle,\n7.Search,\n8.Display,\n9.Reverse,\n10.Insert Data,\n11.Exit.): ");
