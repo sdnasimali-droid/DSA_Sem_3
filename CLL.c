@@ -7,6 +7,10 @@ struct node{
 struct node *head=NULL;
 void insertAtBeginning(int value){
     struct node *newNode=(struct node*)malloc(sizeof(struct node));
+    if(newNode==NULL){
+        printf("Memory allocation failed\n");
+        return;
+    }
     newNode->data=value;
     if(head==NULL){
         newNode->next=newNode;
@@ -23,6 +27,10 @@ void insertAtBeginning(int value){
 }
 void insertAtEnd(int value){ 
     struct node *newNode=(struct node*)malloc(sizeof(struct node));
+    if(newNode==NULL){
+        printf("Memory allocation failed\n");
+        return;
+    }
     newNode->data=value;
     if(head==NULL){
         newNode->next=newNode;
@@ -95,6 +103,10 @@ void insertInMiddle(int value, int position){
         return;
     }
     struct node *newNode=(struct node*)malloc(sizeof(struct node));
+    if(newNode==NULL){
+        printf("Memory allocation failed\n");
+        return;
+    }
     newNode->data=value;
     newNode->next=current->next;
     current->next=newNode;
@@ -164,6 +176,10 @@ int main(){
     struct node *first=(struct node*)malloc(sizeof(struct node));
     struct node *second=(struct node*)malloc(sizeof(struct node));
     struct node *third=(struct node*)malloc(sizeof(struct node));
+    if(first==NULL || second==NULL || third==NULL){
+        printf("Memory allocation failed\n");
+        return 1;
+    }
     first->data=10;
     second->data=20;
     third->data=30;
